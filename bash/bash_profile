@@ -1,0 +1,6 @@
+# Basic bash profile for M. Musick
+# To install, add to your ~/ directory and preprend with a '.'
+
+. ~/.bashrc
+ENV=$HOME/.bashrc
+export ENV

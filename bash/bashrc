@@ -1,0 +1,28 @@
+# Bash settings
+# M. Musick
+#
+# To install, add to '~/.' and prepend the file with a '.'
+
+# History of commands
+export HISTFILESIZE=3000        # The bash histroy should have 3000 commands
+export HISTCONTROL=ignoredups   # Don't put duplicate lines in the history
+alias hist='history | grep $1'  # Requires one input string; displays all
+                                # previous commands which match the string
+#Some useful aliases
+alias ls="ls -1FG"        # add colors and file type
+alias la="ls -aCFG"        # list hidden files; add colors and file type
+alias ll="ls -la |less"    # display in list format using pager 'less'
+alias lt="ls -lat |less"   # display in order of time last modified
+alias lu="ls -laut |less"  # display in order of time last accessed
+# alias rm="rm -i"           # default to confirm deletion of files
+
+# Cursor Line Settings
+# \e[0;35\] -- Changes Color to Purple
+# \User, \Working Directory, \ - "for clarity", \Current Session Line Number
+# [\e[m\]]
+PS1='\[\e[0;35m\]\u \W \$\[\e[0m\] '
+
+# printing colors for file types
+# see "man ls" for more
+LSCOLORS='Bxfxcxdxbxegedabagacad'
+export LSCOLORS
